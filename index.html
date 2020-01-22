@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wedding Photography Website</title>
+    <!-- link to styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Cormorant+Garamond:400|Alex+Brush&display=swap" rel="stylesheet">   
+    <!-- link to fontawesome -->
+    <script src="https://kit.fontawesome.com/f3369905b3.js" crossorigin="anonymous"></script>
+    <!-- link to animations-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<body>
+    <header id="home">
+        <nav>
+            <a href="#home"><img class="logo" src="./assets/nmw-logo.png" alt=""></a>
+
+            <label tabindex="0" for="toggle-menu" class="toggle"><i class="fa fa-bars"></i></label>
+            <input type="checkbox" id="toggle-menu" autocomplete="off">
+            <ul class="serif">
+                <li><a href="#intro">Our Story</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="wrapper">
+        <h1>veritatis consequatur</h1>
+        <p class="serif animated fadeIn delay-0.2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur reiciendis magnam expedita reprehenderit animi libero molestias officiis ullam culpa inventore sequi, neque architecto mollitia eligendi debitis sit non, error voluptates.</p>
+        </div>
+    </header>
+    <main>
+        <section class="intro" id="intro">
+            <div class="intro-content wrapper">
+                <h2 class="serif">Our Story</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa aspernatur repellat esse nesciunt quisquam vero ut ab illo quos at commodi, voluptate porro!</p>
+                <p class="sig">Lorem ipsum dolor sit amet consectetur adipisicing eius!</p>
+            </div>
+        </section>
+
+        <section class="services wrapper" id="services">
+            <div class="text-container">
+                <h3 class="serif">Engagement Photo Sessions</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, temporibus officiis adipisci corrupti eaque cum voluptatem! Minima obcaecati neque in animi sint et consequuntur qui.</p>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Perspiciatis, temporibus officiis adipisci</li>
+                    <li>Lorem atque sequi veritatis</li>
+                    <li>Corrupti eaque cum voluptatem</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Perspiciatis, temporibus officiis adipisci</li>
+                </ul>
+                <button>See pricing</button>
+            </div>
+            <div class="img-container">
+                <img src="./assets/bucharest-wedding-photographer.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <h4 class="serif">Gallery</h4>
+            <div class="gallery-container wrapper"> 
+                <i class="fas fa-angle-left"></i>
+                <ul>
+                </ul>
+                <i class="fas fa-angle-right"></i>
+            </div> 
+        </section>
+        
+        <aside class="wrapper" id="contact">
+            <h5 class="serif">Contact Us</h5>
+            <p>Lorem ipsum sit amet, consectetur adipisicing elit contact us at info@nmwphoto.com</p>
+            <form action="#" name="contact-us">
+                <div class="form-fields">
+                    <div class="form-left">
+                        <input type="text" id="name" name="name" required="" placeholder="Full Name *">        
+                        <input type="e-mail" id="e-mail" name="e-mail" required="" placeholder="Email *">
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                    </div>
+                    <textarea name="inquiry" id="inquiry" maxlength="200">Tell us a bit about yourself or what you'd like to know about us</textarea>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+            <div class="up-button">
+                <i class="fas fa-chevron-up"></i>
+                <a href="#home">Top</a>
+            </div>
+        </aside>   
+
+    </main>
+    <footer>
+        <div class="footer-bar wrapper">
+            <span> © 2020 Robin Nong. All Rights Reserved.</span>
+            <ul>
+                <li>
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fab fa-youtube"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
