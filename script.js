@@ -5,9 +5,8 @@ app.$navIcon = $('nav label i')
 app.$navMenu = $('nav ul')
 app.$navCheckbox = $('nav input[type="checkbox"]')  
 app.$navLink = $('nav li') 
-app.$rightArrow = $('.fa-angle-right')
-app.$leftArrow = $('.fa-angle-left')
-
+app.$rightArrow = $('.fa-chevron-right')
+app.$leftArrow = $('.fa-chevron-left')
 app.$gallery = $('#gallery ul') 
 
 app.galleryArray = [
@@ -112,7 +111,7 @@ app.toggleMenu = () => {
     if (mqlMobile.matches === true) {
         $('body').toggleClass("positionFixed") // PREVENT SCROLLING WHEN SIDEBAR IS OPEN
     }
-}
+} 
 
 app.init = () => {
     // EVENTS 
@@ -120,7 +119,7 @@ app.init = () => {
     app.$navCheckbox.on('click', app.toggleMenu)   
     app.$navLink.on('click', app.toggleMenu)  
     app.$leftArrow.on('click', app.toggleGalleryleft)
-    app.$rightArrow.on('click', app.toggleGalleryRight)
+    app.$rightArrow.on('click', app.toggleGalleryRight) 
     $(window).resize(function() {
         app.$gallery.empty()
         app.displayGallery() 

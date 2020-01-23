@@ -203,7 +203,8 @@ aside {
 }
 
 /* SERVICES */
-#services {
+#services,
+#services button {
     background-color:  rgb(250, 250, 250);
 }
 
@@ -231,11 +232,10 @@ aside {
     object-position: bottom;
 }
 
-#services button{
+#services button {
     font-family: inherit;
     font-weight: 600; 
-    margin: 25px 0;
-    background-color: white;
+    margin: 25px 0; 
     border: none;
 } 
 
@@ -300,17 +300,17 @@ aside {
 }
 
 #gallery i {
-    color: rgb(180, 180, 180);
+    color: rgb(200, 200, 200);
     font-size: 4rem;
     position: absolute;  
     bottom: calc(150px - 1.5rem);
-}
+} 
 
-.fa-angle-left { 
+.fa-chevron-left { 
     left: -30px;
 }
 
-.fa-angle-right {
+.fa-chevron-right {
     right: -30px;
 }
 
@@ -332,11 +332,11 @@ form {
 
 .form-fields {
     display: flex;  
+    justify-content: space-between;
 }
 
-.form-left {
-    width: calc(50% - 5px);
-    margin-right: 10px;
+.form-fields div {
+    width: calc(50% - 5px); 
 }
 
 input[type="e-mail"],
@@ -449,7 +449,7 @@ footer span {
     #services .wrapper div,
     #gallery li,
     form,  
-    .form-left,
+    .form-fields div:first-of-type,
     input[type="submit"],
     textarea {
         width: 100%;
@@ -475,8 +475,7 @@ footer span {
         flex-direction: column;
     }  
 
-    .form-left {
-        margin-right: 0;
+    .form-fields div:first-of-type { 
         margin-bottom: 10px;
     }
 
