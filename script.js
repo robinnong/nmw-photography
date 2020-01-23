@@ -7,7 +7,8 @@ app.$navCheckbox = $('nav input[type="checkbox"]')
 app.$navLink = $('nav li') 
 app.$rightArrow = $('.fa-chevron-right')
 app.$leftArrow = $('.fa-chevron-left')
-app.$gallery = $('#gallery ul') 
+app.$gallery = $('#gallery ul')  
+app.$question = $('#faq p:first-child')
 
 app.galleryArray = [
     { 
@@ -45,7 +46,7 @@ const galleryHTML = `<li>
                         </a>
                     </li>`
 
-$('button, .fa, .fas, input[type="submit"]').addClass('pointer')
+$('button, .fa, .fas, input[type="submit"], #faq p:first-child').addClass('pointer')
 
 //FUNCTIONS 
 app.displayGallery = () => {
@@ -62,7 +63,7 @@ app.displayGallery = () => {
     }
 }
 
-app.toggleMobileGallery = () => {
+app.toggleMobileGallery = () => { 
     const tile = app.galleryArray[i]
     $('#gallery img').attr("src", tile.image)
     $('.caption').text(tile.caption)
@@ -76,6 +77,7 @@ app.toggleGalleryRight = () => {
     } else {
         i = 0
     }
+    $('#gallery li').toggle().fadeIn('slow');
     app.toggleMobileGallery()
 }
 
@@ -84,7 +86,8 @@ app.toggleGalleryleft = () => {
         i = i - 1
     } else {
         i = numTiles
-    } 
+    }  
+    $('#gallery li').toggle().fadeIn('slow');
     app.toggleMobileGallery()
 }
 
@@ -113,13 +116,20 @@ app.toggleMenu = () => {
     }
 } 
 
+app.toggleAnswer = function() {
+    $(this).siblings().toggle()  
+    $(this).find('i').toggleClass('fa-angle-up')  
+}
+
 app.init = () => {
     // EVENTS 
+    app.$question.siblings().hide() 
     app.displayGallery() 
     app.$navCheckbox.on('click', app.toggleMenu)   
     app.$navLink.on('click', app.toggleMenu)  
     app.$leftArrow.on('click', app.toggleGalleryleft)
     app.$rightArrow.on('click', app.toggleGalleryRight) 
+    app.$question.on('click', app.toggleAnswer)
     $(window).resize(function() {
         app.$gallery.empty()
         app.displayGallery() 

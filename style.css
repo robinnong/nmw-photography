@@ -104,7 +104,7 @@ h3,
 h4,
 h5,
 h6,
-.sig,
+#intro p:last-of-type, 
 #gallery span {
     font-size: 2.4rem;
 }
@@ -113,7 +113,10 @@ h6,
     font-family: 'Cormorant Garamond', serif;
 }
 
-p,
+p{
+    line-height: 20px;
+}
+
 #services li {
     line-height: 25px;
 }
@@ -126,6 +129,13 @@ aside p,
 #gallery li {
     text-align: center;
 }
+
+h1, 
+header p,
+#gallery span,
+input[type="submit"]  {
+    color: white;
+} 
 
 /* HEADER START */
 header {
@@ -174,11 +184,6 @@ header nav li:hover a{
     border-bottom: 1px solid black;
 }
 
-h1, 
-header p {
-    color: white;
-} 
-
 header p {
     font-size: 1.9rem;  
     width: 500px;
@@ -186,6 +191,12 @@ header p {
 }
 
 /* MAIN */
+#services,
+#services button,
+#faq {
+    background-color:  rgb(250, 250, 250);
+}
+
 section,
 aside {
     padding: 50px 0; 
@@ -198,23 +209,19 @@ aside {
     margin-bottom: 20px;
 }
 
-.sig {
+#intro p:last-of-type {
     font-family: 'Alex Brush', cursive; 
 }
 
 /* SERVICES */
-#services,
-#services button {
-    background-color:  rgb(250, 250, 250);
-}
-
 #services .wrapper{
     height: 80vh;
     display: flex;
 }
 
 .text-container { 
-    padding: 50px 80px 50px 0; 
+    padding-top: 50px;
+    padding-right: 80px;
 }
 
 #services li {
@@ -268,12 +275,8 @@ aside {
 }
 
 #gallery li img {
-    height: 300px;
+    height: 350px;
     object-fit: cover; 
-}
-
-#gallery span {     
-    color: white;     
 }
 
 .gallery-container .serif {
@@ -301,23 +304,35 @@ aside {
 
 #gallery i {
     color: rgb(200, 200, 200);
-    font-size: 4rem;
+    font-size: 3.5rem;
     position: absolute;  
     bottom: calc(150px - 1.5rem);
 } 
 
 .fa-chevron-left { 
-    left: -30px;
+    left: -25px;
 }
 
 .fa-chevron-right {
-    right: -30px;
+    right: -25px;
 }
 
-/* FAQ */
-#faq {
-    background-color:  rgb(250, 250, 250);
+/* FAQ */ 
+#faq li:not(:last-of-type) {
+    margin-bottom: 30px;
 }
+
+#faq p:first-child {
+    margin-bottom: 10px;  
+}   
+
+#faq p:last-of-type {
+    font-weight: 300;
+}
+
+#faq i {
+    font-size: 1.8rem;
+} 
 
 /* CONTACT US */ 
 /* FORM */
@@ -361,8 +376,7 @@ textarea {
 }
 
 input[type="submit"] {
-    background-color: black;
-    color: white;
+    background-color: black; 
     padding: 10px 20px; 
     letter-spacing: 2px;
     transition: all 0.2s;
@@ -460,7 +474,8 @@ footer span {
     }
 
     .text-container { 
-        padding-right: 0;
+        padding: 0;
+        margin-bottom: 25px;
     }
 
     #services img {
@@ -496,5 +511,5 @@ footer span {
 @media (max-width: 480px) {
     .wrapper {
         width: 80%; 
-    }
+    } 
 }
