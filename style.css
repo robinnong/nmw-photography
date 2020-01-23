@@ -414,6 +414,10 @@ footer span {
     font-size: 1.2rem;
 }
 
+footer span a {
+    text-decoration: underline;
+}
+
 /* MEDIA QUERRIES */ 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {

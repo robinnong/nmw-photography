@@ -13,19 +13,19 @@ app.$question = $('#faq p:first-child')
 app.galleryArray = [
     { 
         image: "./assets/man-standing-in-front-of-woman-in-white-wedding-dress.jpg",
-        alt: "Bride and groom standing face to face on a stage",
+        alt: "Bride and groom standing face to face on a stage. Photo by Jonathan Borba.",
         caption: "Sarah & Eric",
         date: "02/20"
     },
     { 
         image: "./assets/photo-of-bride-and-groom-hugging.jpg",
-        alt: "Bride and groom hugging",
+        alt: "Bride and groom hugging. Photo by Jeremy Wong.",
         caption: "Janet & Rebecca", 
         date: "11/19"
     }, 
     { 
         image: "./assets/photo-of-couple-walking-on-paved-pathway.jpg", 
-        alt: "Couple holding hands while walking on a paved pathway with backs to the camera",
+        alt: "Couple holding hands while walking on a paved pathway with backs to the camera. Photo by Emir Kaan Okutan.",
         caption: "Angela & Kevin",
         date: "04/19"
     },
