@@ -8,7 +8,7 @@ app.$navLink = $('nav li')
 app.$rightArrow = $('.fa-angle-right')
 app.$leftArrow = $('.fa-angle-left')
 
-app.$gallery = $('.gallery ul') 
+app.$gallery = $('#gallery ul') 
 
 app.galleryArray = [
     { 
@@ -65,7 +65,7 @@ app.displayGallery = () => {
 
 app.toggleMobileGallery = () => {
     const tile = app.galleryArray[i]
-    $('.gallery img').attr("src", tile.image)
+    $('#gallery img').attr("src", tile.image)
     $('.caption').text(tile.caption)
     $('.date').text(tile.date)
 }

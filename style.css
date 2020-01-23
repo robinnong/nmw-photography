@@ -17,6 +17,7 @@ h2,
 h3,
 h4, 
 h5,
+h6,
 p {
 	margin: 0;
     padding: 0;
@@ -75,6 +76,7 @@ h2,
 h3,
 h4,
 h5,
+h6,
 input[type="submit"],
 .up-button a {
     text-transform: uppercase;
@@ -91,7 +93,8 @@ h2,
 h3,
 h4,
 h5,
-.services p  {
+h6,
+#services p  {
     font-weight: 400;
     margin-bottom: 30px;
 }
@@ -100,8 +103,9 @@ h2,
 h3,
 h4,
 h5,
+h6,
 .sig,
-.gallery span {
+#gallery span {
     font-size: 2.4rem;
 }
 
@@ -110,14 +114,16 @@ h5,
 }
 
 p,
-.services li {
+#services li {
     line-height: 25px;
 }
 
-h4, h5,
+h4, 
+h5,
+h6,
 aside p,
-.intro,
-.gallery li {
+#intro,
+#gallery li {
     text-align: center;
 }
 
@@ -180,18 +186,13 @@ header p {
 }
 
 /* MAIN */
-
 section,
 aside {
     padding: 50px 0; 
 }
 
-/* INTRO */
-.intro {
-    background-color:  rgb(250, 250, 250);
-}
-
-.intro p {
+/* INTRO */ 
+#intro p {
     width: 60%;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -202,7 +203,11 @@ aside {
 }
 
 /* SERVICES */
-.services {
+#services {
+    background-color:  rgb(250, 250, 250);
+}
+
+#services .wrapper{
     height: 80vh;
     display: flex;
 }
@@ -211,7 +216,7 @@ aside {
     padding: 50px 80px 50px 0; 
 }
 
-.services li {
+#services li {
     list-style: circle inside;
 }
 
@@ -220,45 +225,40 @@ aside {
     width: 50%;
 }
 
-.services img {
+#services img {
     height: 100%;
     object-fit: cover;
     object-position: bottom;
 }
 
-.services button{
+#services button{
     font-family: inherit;
     font-weight: 600; 
     margin: 25px 0;
     background-color: white;
     border: none;
-
 } 
 
-.services button::after {
+#services button::after {
     content: ' ⟶';   
     transition: all 0.3s;
 } 
 
-.services button:hover:after  {
+#services button:hover:after  {
     padding-left: 10px;
 } 
 
-/* GALLERY */
-.gallery {
-    background-color:  rgb(250, 250, 250); 
-}
-
+/* GALLERY */ 
 .gallery-container { 
     position: relative;
 }
 
-.gallery ul {
+#gallery ul {
     display: flex;
     justify-content: space-between;
 }
 
-.gallery li {
+#gallery li {
     width: calc(100%/4 - 10px);
     position: relative;
 }
@@ -267,12 +267,12 @@ aside {
     width: 100%
 }
 
-.gallery li img {
+#gallery li img {
     height: 300px;
     object-fit: cover; 
 }
 
-.gallery span {     
+#gallery span {     
     color: white;     
 }
 
@@ -295,11 +295,11 @@ aside {
     transition: all 0.3s;
 }
 
-.gallery li:hover .overlay {
+#gallery li:hover .overlay {
     opacity: 1;
 }
 
-.gallery i {
+#gallery i {
     color: rgb(180, 180, 180);
     font-size: 4rem;
     position: absolute;  
@@ -312,6 +312,11 @@ aside {
 
 .fa-angle-right {
     right: -30px;
+}
+
+/* FAQ */
+#faq {
+    background-color:  rgb(250, 250, 250);
 }
 
 /* CONTACT US */ 
@@ -401,7 +406,6 @@ footer span {
     
     header nav {
         margin-top: 0;
-        flex-direction: column;
     }
 
     header nav ul {
@@ -440,60 +444,40 @@ footer span {
         right: 0;    
     }
 
-    header p {
-        width: 100%;
-    }
-
-    .intro p {
-        width: 100%;
-    }
-
-    .services {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .text-container {
-        width: 100%;
-        padding-right: 0;
-    }
-
-    .img-container {
-        width: 100%;
-    }
-
-    .services img {
-        height: auto;   
-        object-fit: cover;
-        object-position: bottom;
-    }
-
-    .gallery ul {
-        flex-direction: column;
-    } 
-
-    .gallery li {
-        width: 100%;
-    }
-
-    .form-fields {
-        flex-direction: column;
-    }
-
-    #subject {
-        margin-bottom: 10px;
-    }
-
-    .form-fields,
+    header p,
+    #intro p, 
+    #services .wrapper div,
+    #gallery li,
+    form,  
     .form-left,
-    form,
     input[type="submit"],
     textarea {
         width: 100%;
     } 
+    #services img,
+    #services .wrapper {
+        height: auto;
+    }
+
+    .text-container { 
+        padding-right: 0;
+    }
+
+    #services img {
+        object-fit: cover;
+        object-position: bottom;
+    }
+
+    header nav,
+    #services .wrapper,
+    #gallery ul,
+    .form-fields {
+        flex-direction: column;
+    }  
 
     .form-left {
         margin-right: 0;
+        margin-bottom: 10px;
     }
 
     textarea {
