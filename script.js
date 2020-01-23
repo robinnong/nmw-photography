@@ -12,22 +12,26 @@ app.$question = $('#faq p:first-child')
 
 app.galleryArray = [
     { 
-        image: "./assets/bouquet-of-flowers.jpg",
+        image: "./assets/man-standing-in-front-of-woman-in-white-wedding-dress.jpg",
+        alt: "Bride and groom standing face to face on a stage",
         caption: "Sarah & Eric",
         date: "02/20"
     },
     { 
-        image: "./assets/birde-under-lights.jpg",
-        caption: "Angela & Sam", 
+        image: "./assets/photo-of-bride-and-groom-hugging.jpg",
+        alt: "Bride and groom hugging",
+        caption: "Janet & Rebecca", 
         date: "11/19"
     }, 
     { 
-        image: "./assets/photo-of-bride-and-groom-hugging.jpg", 
-        caption: "Janet & Rebecca",
+        image: "./assets/photo-of-couple-walking-on-paved-pathway.jpg", 
+        alt: "Couple holding hands while walking on a paved pathway with backs to the camera",
+        caption: "Angela & Kevin",
         date: "04/19"
     },
     { 
         image: "./assets/pink-and-red-roses-centerpiece.jpg", 
+        alt: "Pink and red roses centerpiece on an outdoor dining table",
         caption: "Francis & Mel",
         date: "02/19"
     }
@@ -38,7 +42,7 @@ const numTiles = app.galleryArray.length -1
 const mqlMobile = window.matchMedia('(max-width: 480px)'); // media query list  
 const galleryHTML = `<li>
                         <a href="#">
-                        <img src="">
+                        <img src="" alt="">
                         <div class="overlay">
                             <span class="caption"></span> 
                             <span class="serif date"></span>
@@ -65,7 +69,7 @@ app.displayGallery = () => {
 
 app.toggleMobileGallery = () => { 
     const tile = app.galleryArray[i]
-    $('#gallery img').attr("src", tile.image)
+    $('#gallery img').attr("src", tile.image).attr("alt", tile.alt)
     $('.caption').text(tile.caption)
     $('.date').text(tile.date)
 }
