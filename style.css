@@ -319,10 +319,11 @@ aside {
 
 /* FAQ */ 
 #faq li:not(:last-of-type) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #faq p:first-child {
+    font-size: 1.4rem;
     margin-bottom: 10px;  
 }   
 
