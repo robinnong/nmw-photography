@@ -1,14 +1,14 @@
 const app = {}; //NAMESPACED OBJECT
 
 // CACHED JQUERY SELECTORS 
-app.$navIcon = $('nav label i') 
-app.$navMenu = $('nav ul')
-app.$navCheckbox = $('nav input[type="checkbox"]')  
-app.$navLink = $('nav li') 
+app.$navIcon = $('.toggle i') 
+app.$navMenu = $('header nav ul')
+app.$navCheckbox = $('.toggle')  
+app.$navLink = $('.header-nav li') 
 app.$rightArrow = $('.fa-chevron-right')
 app.$leftArrow = $('.fa-chevron-left')
-app.$gallery = $('#gallery ul')  
-app.$question = $('#faq p:first-child')
+app.$gallery = $('.gallery ul')  
+app.$question = $('.faq ul div')
 
 app.galleryArray = [
     { 
@@ -43,14 +43,14 @@ const mqlMobile = window.matchMedia('(max-width: 480px)'); // media query list
 const galleryHTML = `<li>
                         <a href="#">
                         <img src="" alt="">
-                        <div class="overlay">
+                        <div class="gallery-text">
                             <span class="caption"></span> 
                             <span class="serif date"></span>
                         </div>
                         </a>
                     </li>`
 
-$('button, .fa, .fas, input[type="submit"], #faq p:first-child').addClass('pointer')
+$('button, .fa, .fas, input[type="submit"], .faq ul div').addClass('pointer')
 
 //FUNCTIONS 
 app.displayGallery = () => {
@@ -69,7 +69,7 @@ app.displayGallery = () => {
 
 app.toggleMobileGallery = () => { 
     const tile = app.galleryArray[i]
-    $('#gallery img').attr("src", tile.image).attr("alt", tile.alt)
+    $('.gallery img').attr("src", tile.image).attr("alt", tile.alt)
     $('.caption').text(tile.caption)
     $('.date').text(tile.date)
 }
@@ -81,7 +81,7 @@ app.toggleGalleryRight = () => {
     } else {
         i = 0
     }
-    $('#gallery li').toggle().fadeIn('slow');
+    $('.gallery li').toggle().fadeIn('slow');
     app.toggleMobileGallery()
 }
 
@@ -91,7 +91,7 @@ app.toggleGalleryleft = () => {
     } else {
         i = numTiles
     }  
-    $('#gallery li').toggle().fadeIn('slow');
+    $('.gallery li').toggle().fadeIn('slow');
     app.toggleMobileGallery()
 }
 
@@ -102,7 +102,7 @@ app.toggleFullGallery = () => {
         `<li>
             <a href="#">
                 <img src="${inst.image}">
-                <div class="overlay">
+                <div class="gallery-text">
                     <span class="caption">${inst.caption}</span>
                     <span class="serif date">${inst.date}</span>
                 </div>

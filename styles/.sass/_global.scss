@@ -1,0 +1,62 @@
+/* default font size and smooth scrolling - DON'T CHANGE */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/* GENERIC OVERRIDES */
+ul,
+h1,
+h2, 
+p,
+fieldset,
+button {
+	margin: 0;
+    padding: 0;
+}
+
+/* removes the list bullets */
+ul {list-style: none;}
+
+/* removes default syling from links and buttons */
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+    height: 100%;
+	width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+button {
+    background-color: inherit;
+    border: none;
+    font-family: inherit;
+}
+
+/* default wrapper - DON'T CHANGE */
+.wrapper {
+	width: 85%;
+	max-width: 1050px;
+	margin: 0 auto;
+}
+
+/* default sans serif font*/
+body {
+    min-width: 350px; 
+    max-width: 1500px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    color: #4A455C;
+    line-height: 2.2rem;
+}
+
+.positionFixed {position: fixed;}
+
+.pointer {cursor: pointer;}
+
+.fullWidth {width: 100%}

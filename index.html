@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Wedding Photography Website</title>
-    <!-- link to styles -->
-    <link rel="stylesheet" href="style.css">
     <!-- link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Cormorant+Garamond:400|Alex+Brush&display=swap" rel="stylesheet">   
     <!-- link to fontawesome -->
     <script src="https://kit.fontawesome.com/f3369905b3.js" crossorigin="anonymous"></script>
     <!-- link to animations-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- link to styles -->
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header id="home">
-        <nav>
-            <a href="#home"><img class="logo" src="./assets/nmw-logo.png" alt=""></a>
-
-            <label tabindex="0" for="toggle-menu" class="toggle" aria-label="Click to toggle navigation menu"><i class="fa fa-bars" aria-hidden="true"></i></label>
-            <input type="checkbox" id="toggle-menu" autocomplete="off">
+    <!-- Header starts here -->
+    <header class="home" id="home">
+        <nav class="header-nav">
+            <a href="#home">
+                <img class="logo" src="./assets/nmw-logo.png" alt="">
+            </a>
+            <label class="toggle" aria-label="Click to toggle navigation menu"><i class="fa fa-bars" aria-hidden="true"></i></label>
+            <input type="checkbox" id="toggle-menu" autocomplete="off" checked="false" aria-hidden="false">
             <ul class="serif">
                 <li><a href="#intro">Our Story</a></li>
                 <li><a href="#services">Services</a></li>
@@ -30,21 +32,24 @@
             </ul>
         </nav>
         <div class="wrapper">
-        <h1>veritatis consequatur</h1>
-        <p class="serif animated fadeIn delay-0.2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur reiciendis magnam expedita reprehenderit animi libero molestias officiis ullam culpa inventore sequi, neque architecto mollitia eligendi debitis sit non, error voluptates.</p>
+            <h1>We Capture Your Best Moments</h1>
+            <p class="serif animated fadeIn delay-0.2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur reiciendis magnam expedita reprehenderit animi libero molestias officiis ullam culpa inventore sequi, neque architecto mollitia eligendi debitis sit non, error voluptates.</p>
         </div>
     </header>
+    <!-- Header ends here -->
+    <!-- Main starts here -->
     <main>
-        <section class="wrapper" id="intro"> 
+        <!-- Intro Section -->
+        <section class="wrapper intro" id="intro"> 
             <h2 class="serif">Our Story</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa aspernatur repellat esse nesciunt quisquam vero ut ab illo quos at commodi, voluptate porro!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing eius!</p>
         </section>
-
-        <section id="services">
+        <!-- Services section -->
+        <section class="services" id="services">
             <div class="wrapper">
                 <div class="text-container">
-                    <h3 class="serif">Engagement Photo Sessions</h3>
+                    <h2 class="serif">Engagement Photo Sessions</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, temporibus officiis adipisci corrupti eaque cum voluptatem! Minima obcaecati neque in animi sint et consequuntur qui.</p>
                     <ul>
                         <li>Lorem ipsum dolor sit amet</li>
@@ -61,9 +66,9 @@
                 </div>
             </div>
         </section>
-
-        <section id="gallery">
-            <h4 class="serif">Gallery</h4>
+        <!-- Gallery section -->
+        <section class="gallery" id="gallery">
+            <h2 class="serif">Gallery</h2>
             <div class="gallery-container wrapper"> 
                 <i class="fas fa-chevron-left"></i>
                 <ul>
@@ -71,70 +76,105 @@
                 <i class="fas fa-chevron-right"></i>
             </div> 
         </section>
-
-        <section id="faq">
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
             <div class="wrapper">
-            <h5 class="serif">Frequently Asked Questions</h5>
+            <h2 class="serif">Frequently Asked Questions</h2>
             <ul>
                 <li>
-                    <p>Q. What kind of equipment do you use? <i class="fas fa-angle-down" aria-hidden="true" aria-label="Click to show answer"></i></p>
-                    <p>Our team uses Nikon D5 and D850 bodies, a variety of high-end lenses, and lighting gear suited for both indoor and outdoor conditions. All equipment is insured and the team is always equipt with back-up gear in the case of damages, theft or technical malfunctions.</p>
+                    <div aria-label="Click to show answer"> 
+                        <span>Q. What kind of equipment do you use?</span>
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <p>Our team uses Nikon D5 and D850 bodies, a variety of high-end lenses, and lighting gear suited for both indoor and outdoor conditions. All equipment is insured and the team is always equipped with back-up gear in the case of damages, theft or technical malfunctions.</p>
                 </li> 
                 <li>
-                    <p>Q. How much does it cost to hire you for our wedding day? What about engagement shoot packages? <i class="fas fa-angle-down" aria-hidden="true" aria-label="Click to show answer"></i></p>
+                    <div aria-label="Click to show answer">
+                        <span>Q. How much does it cost to hire you for our wedding day? What about engagement shoot packages?</span>
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </div>
                     <p>Lorem ipsum dolor eaque saepe quas natus sit amet consectetur adipisicing elit. Accusamus numquam quo quis eaque saepe quas natus, adipisci rem unde hic pariatur nobis, sequi maxime alias.</p>
                 </li> 
                 <li>
-                    <p>Q. When should I expect to receive my photos? <i class="fas fa-angle-down" aria-hidden="true" aria-label="Click to show answer"></i></p>
+                    <div aria-label="Click to show answer">
+                        <span>Q. When should I expect to receive my photos?</span>
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus numquam quo quis eaque saepe quas natus, adipisci rem unde hic pariatur nobis, sequi maxime alias!</p>
                 </li> 
                 <li>
-                    <p>Q. How does the payment process work and how do I guarantee a booking? <i class="fas fa-angle-down" aria-hidden="true" aria-label="Click to show answer"></i></p>
+                    <div aria-label="Click to show answer">
+                        <span>Q. How does the payment process work and how do I guarantee a booking?</span>    
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </div>
                     <p>We require a 50% retainer fee and a signed agreement in order to secure our services for your special day. After booking, the remainder of the payment is due 30 days prior to the wedding day. Payments can be made via E-transfer, cheque or cash.</p>
                 </li> 
                 <li>
-                    <p>Q. Can we hire you for our destination wedding? <i class="fas fa-angle-down" aria-hidden="true" aria-label="Click to show answer"></i></p>
+                    <div aria-label="Click to show answer">
+                        <span>Q. Can we hire you for our destination wedding?</span> 
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </div>
                     <p>Yes, we will travel to where ever you are!</p>
                 </li> 
             </ul>
             </div>
         </section>
-        
-        <aside class="wrapper" id="contact">
-            <h6 class="serif">Contact Us</h6>
+        <!-- Contact Section -->
+        <section class="wrapper contact" id="contact">
+            <h2 class="serif">Contact Us</h2>
             <p>For bookings or general inquiries, please complete the form below or contact us directly at info@nmwphoto.com</p>
             <form action="#" method="#" class="contact-form" name="contact-us">
-                <div class="form-fields">
-                    <div>
-                        <input type="text" id="name" name="name" required="" placeholder="Full Name *">        
+                <div class="form-container">
+                    <fieldset>
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" id="name" name="name" required="" placeholder="Full Name *">    
+
+                        <label for="e-mail" class="sr-only">E-mail</label>    
                         <input type="e-mail" id="e-mail" name="e-mail" required="" placeholder="Email *">
+
+                        <label for="subject" class="sr-only">Subject</label>
                         <input type="text" id="subject" name="subject" placeholder="Subject">
-                    </div>
-                    <textarea name="inquiry" id="inquiry" maxlength="200">Tell us a bit about yourself or what you'd like to know about us</textarea>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="inquiry" class="sr-only">Message</label>
+                        <textarea name="inquiry" id="inquiry" maxlength="200">Tell us a bit about yourself or what you'd like to know about us</textarea>
+                    </fieldset>
                 </div>
                 <input type="submit" value="Submit">
             </form>
-        </aside>   
+        </section>   
     </main>
+    <!-- Main ends here -->
+    <!-- Footer starts here -->
     <footer>
         <div class="footer-bar wrapper">
             <span>Code and design by Robin Nong. Photos from <a href="https://www.pexels.com/" rel="external">Pexels.</a></span>
-            <ul>
+            <ul class="social-links">
                 <li>
-                    <a href="" rel="external" aria-label="Go to NMW Facebook page"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="" rel="external" aria-label="Go to NMW Facebook page">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
                 </li>
                 <li>
-                    <a href="" rel="external" aria-label="Go to NMW Twitter page"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="" rel="external" aria-label="Go to NMW Twitter page">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
                 </li>
                 <li>
-                    <a href="" rel="external" aria-label="Go to NMW Instagram page"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="" rel="external" aria-label="Go to NMW Instagram page">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
                 </li>
                 <li>
-                    <a href="" rel="external" aria-label="Go to NMW Youtube page"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    <a href="" rel="external" aria-label="Go to NMW Youtube page">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                    </a>
                 </li>
             </ul>
         </div>
     </footer>
+    <!-- Footer ends here -->
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
     <script src="script.js"></script>
