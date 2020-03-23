@@ -7,7 +7,7 @@ h2,
 input[type="submit"] {text-transform: uppercase;}
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     letter-spacing: 3px;
     line-height: 3rem;
     margin-top: 30vh; 
@@ -43,14 +43,11 @@ header {
         nav {
             background-color: white;
             padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;    
-                ul {
-                    width: 500px;
-                    font-size: 1.8rem;
-                    letter-spacing: 2px;
-                    display: flex;
+            ul {
+                width: 500px;
+                font-size: 1.8rem;
+                letter-spacing: 2px;
+                display: flex;
                     justify-content: space-between;
                 }
             }
@@ -60,12 +57,26 @@ header {
             transition: all 0.3s;
         }
         li:hover a{border-bottom: 1px solid black;}
+        div.wrapper {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+        div.header-text {width: 700px;}
         p {
             color: white;
             font-size: 2.4rem;  
-            width: 500px;
             line-height: 3rem;
         }
+    }
+    
+.nav-bar {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
 }
 
 /* header logo */
@@ -99,8 +110,7 @@ section {padding: 100px 0;}
 
 /* SERVICES SECTION*/
 .services {
-    .wrapper{
-        height: 80vh;
+    .wrapper {
         display: flex;
     }
     li {
@@ -121,9 +131,9 @@ section {padding: 100px 0;}
 .img-container,
 .text-container  {width: 50%;}
 
-.text-container { 
-    padding: 50px 80px 0 0;
-}
+.text-container {padding: 50px 80px 0 0;}
+
+.img-container {height: 600px}
 
 /* GALLERY SECTION*/ 
 .gallery-container { 
@@ -352,10 +362,13 @@ footer {
 
     .wrapper {width: 85%;} 
     
-    header p {font-size: 2rem;}
+    header p {
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
 
     h1,
-    h2 {font-size: 2.6rem;}
+    h2 {font-size: 2.4rem;}
     
     section {padding: 50px 0;}
 

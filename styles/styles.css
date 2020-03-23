@@ -304,7 +304,6 @@ button {
 /* default sans serif font*/
 body {
   min-width: 350px;
-  max-width: 1500px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
   color: #4A455C;
@@ -331,7 +330,7 @@ input[type="submit"] {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   letter-spacing: 3px;
   line-height: 3rem;
   margin-top: 30vh;
@@ -377,15 +376,6 @@ header {
 header nav {
   background-color: white;
   padding: 20px 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 header nav ul {
@@ -411,11 +401,41 @@ header li:hover a {
   border-bottom: 1px solid black;
 }
 
+header div.wrapper {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header div.header-text {
+  width: 700px;
+}
+
 header p {
   color: white;
   font-size: 2.4rem;
-  width: 500px;
   line-height: 3rem;
+}
+
+.nav-bar {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* header logo */
@@ -459,7 +479,6 @@ section {
 
 /* SERVICES SECTION*/
 .services .wrapper {
-  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -492,6 +511,10 @@ section {
 
 .text-container {
   padding: 50px 80px 0 0;
+}
+
+.img-container {
+  height: 600px;
 }
 
 /* GALLERY SECTION*/
@@ -801,10 +824,11 @@ footer {
   }
   header p {
     font-size: 2rem;
+    line-height: 2.4rem;
   }
   h1,
   h2 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
   }
   section {
     padding: 50px 0;
